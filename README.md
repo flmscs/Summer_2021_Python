@@ -1,4 +1,4 @@
-# Summer_2021_Python
+# Summer_of_Code
 
 You will find my python code here.
 Suggestions are welcome.
