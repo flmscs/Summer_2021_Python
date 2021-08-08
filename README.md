@@ -11,5 +11,5 @@ Suggestions are welcome.
 * **turtle_data_in_list** - Store data in a list
 * **turtle_experiment** - Try out a design of your own!
 * **even_or_odd** - Compare statements and get a return of True or False
-* **prime** = Is it possible to write code for determining prime numbers?
+* **prime** - Is it possible to write code for determining prime numbers?
 * **adventure_game** - Make your a text-based adventure game
