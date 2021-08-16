@@ -14,3 +14,4 @@ Suggestions are welcome.
 * **prime** - Is it possible to write code for determining prime numbers?
 * **adventure_game** - Make your a text-based adventure game
 * **adventure_game_with_if_not** - Output 'invalid response' if m,f,c,r,or s is not chosen (map, flashlight, chocolate, rope or stick)
+* **dice_game** Compete against R2-D2, I mean the computer!
