@@ -81,7 +81,7 @@ while not gameOver:
     elif item == 'wf':
         print('Your fish is ', fishLength, ' long')
         if fishTally['Winter Flounder'] < possessionLimit["Winter Flounder"]:
-            if fishLength ['Winter Flounder'] <= maxFishLength['Winter Flounder']:
+            if float(fishLength) <= maxFishLength['Winter Flounder']:
                 print() 
                 print('You can keep this fish!')
                 fishTally['Winter Flounder'] +=1
