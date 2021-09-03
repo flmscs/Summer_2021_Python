@@ -6,13 +6,9 @@
 # use if, elif, else lines of code to tell the user what to do if their fish catch does / does not qualify
 # e to exit app
 
-# Note: I have not been able to fix the error if you enter wf. Legally, you can keep a Winter Flounder
-# if it is twelve inches or less and caught north of Cape Cod.
-
 import math 
 
-#Explain the app
-#Use Google Image Search for fish identification
+#Use Google Image Search and NOAA for fish identification
 print('For Keeps!') 
 print('++++++++++++++++++++++')
 print('Find out the kind, amount and length of Massachusetts saltwater fish you can catch.')
@@ -21,7 +17,9 @@ print('~~~~~~~~~~~~~~~~~~~~~~')
 print('What is at the end of your line?') 
 print('~~~~~~~~~~~~~~~~~~~~~~')
 print('If you are not sure of the species, upload a picture to Google Image Search or go to the NOAA Fisheries website.')
-print ('Note: two new browser tabs will open')
+print ('Note: Two new browser tabs will open')
+
+# Wait three to four seconds; both websites will open
 print('Note: Google Image - click on the camera icon, then upload an image of the fish you caught.')
 print('~~~~~~~~~~~~~~~~~~~~~~')
 import webbrowser
@@ -43,21 +41,17 @@ possessionLimit = {
 		"Winter Flounder" : 8
 	}
 
-
 #What is the maximum length of the fish?
 #Use the dictionary module {}
 maxFishLength = {
 		"Acadian Redfish" : math.inf,
 		"Winter Flounder" : 12
 	}
-
+#This will keep a running tally and possession limit of each fish species you catch
 fishTally = {
 		"Acadian Redfish" : 0,
 		"Winter Flounder" : 0
 	}
-
-
-
 gameOver = False
 while not gameOver:
     print("possession limits")
@@ -67,20 +61,28 @@ while not gameOver:
     print("maximum length allowed for fish")
     print(maxFishLength)
 
+# Insert the input of fish length in inches
     fishLength = input ('How long is the fish you caught (inches)?: ') 
 
+# Add the fish species
     print('Alewife (a), Acadian Redfish (ar), Windowpane Flounder (wf) (or e to exit):')
     item = input('Can I keep the fish? Type the one or two-letter code to find out: ')
     if item == 'e':
         gameOver = True
     elif item == 'a':
+
+# Notification if the fish species is illegal to catch
         print("You are going to have to throw this one back. Try Again.")
     elif item =='ar':
         print('You can keep this fish!')
+
+# Run the app two or three times to see the tally change next to each fish species
         fishTally['Acadian Redfish']+=1
     elif item == 'wf':
         print('Your fish is ', fishLength, ' long')
         if fishTally['Winter Flounder'] < possessionLimit["Winter Flounder"]:
+
+# Use the float() method to compare the Winter Flounder maximum length of twelve inches
             if float(fishLength) <= maxFishLength['Winter Flounder']:
                 print() 
                 print('You can keep this fish!')
@@ -91,12 +93,3 @@ while not gameOver:
         else:
             print('You have caught your limit')
     print()
-    
-
-
-
-
-
-
-
-
