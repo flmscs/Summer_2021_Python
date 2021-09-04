@@ -1,10 +1,22 @@
-# pseudocode for fish conservation app 
-# import math module and use dictionary module for possessionLimit, maxFishLength and fishTally
-# import webbrowser for fish species identification
-# use math.inf to indicate no limit for a species or a fish length (there is no possession limit on the Acadian Redfish)
-# define maxFishLength and fishTally
-# use if, elif, else lines of code to tell the user what to do if their fish catch does / does not qualify
-# e to exit app
+# Pseudocode
+# Import math module
+# Import webbrowser module
+    # Direct to Google Image Search website
+    # Direct to NOAA website
+# Use dictionary module
+    # Define possessionLimit
+    # Define maxFishLength
+        # Use math.inf to indicate no limit for a species
+        # Use math.inf to indicate no limit for fish length
+# Define fishTally
+# Print fish limits overview
+# Input fish length
+    # Use float() method for comparison of Winter Flounder to maximum length allowed
+# Input fish species
+# Output illegal catch
+# Output running tally of fish catch per species
+# Input ‘e’ to exit
+
 
 import math 
 
@@ -34,7 +46,7 @@ print ('Take a look at the limits before you determine if you can keep your fish
 print ('Note: inf = no limits')
 print('~~~~~~~~~~~~~~~~~~~~~~')
 
-#How many of a certain fish species can you catch?
+#How many of a certain fish species are you allowed to catch?
 #Use the dictionary module {}
 possessionLimit = {
 		"Acadian Redfish" : math.inf,
